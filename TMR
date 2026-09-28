@@ -1,0 +1,13 @@
+Pattern A (what you did for Loans — simpler):
+Abstract class only has variables, constructor, getters (no printX mentioned at all)
+Subclass freely adds its own new printX() method, nobody forces it to
+
+Pattern B (what this RoadAccidents example does):
+Abstract class adds one extra line: public abstract void printAccidentReport();
+This forces any subclass to implement printAccidentReport() — if a subclass forgets to write it, the code won't compile
+Which should you use tomorrow?
+
+Check the exact wording of the question. If it doesn't explicitly say the abstract class must declare the print method, either pattern will satisfy the rubric 
+the marks are almost always awarded for "abstract class has constructor + variables + methods" without demanding this exact abstract-method technique.
+Your Loan version (Pattern A) is simpler to write under time pressure and is what I'd recommend defaulting to,
+unless a specific question phrase (like "the abstract class must also declare the print method, to be implemented by the subclass") tells you otherwise.
